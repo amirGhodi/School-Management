@@ -16,6 +16,7 @@ connectDB();
 // Middleware
 app.use(express.json());
 app.use(rateLimiter);
+app.set('trust proxy', true)
 
 app.get('/', (req, res) => { 
     res.send('Server is running!'); 
