@@ -17,6 +17,10 @@ connectDB();
 app.use(express.json());
 app.use(rateLimiter);
 
+app.get('/', (req, res) => { 
+    res.send('Server is running!'); 
+});
+
 // Routes
 app.use('/api', routes);
 
