@@ -1,0 +1,685 @@
+{
+	"info": {
+		"_postman_id": "f2e2db5c-62e5-4e3f-9790-5dad6b089624",
+		"name": "School Managemebt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7069583"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/auth/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+						"type": "text"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US,en;q=0.9,en-IN;q=0.8",
+						"type": "text"
+					},
+					{
+						"key": "cache-control",
+						"value": "max-age=0",
+						"type": "text"
+					},
+					{
+						"key": "cookie",
+						"value": "_vercel_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJyUXBEY2FJaDFIYmVHdHBXTDJBWTBsM0kiLCJpYXQiOjE3MzU3MTU1ODQsIm93bmVySWQiOiJ0ZWFtX25WUnlENUdwZ0tpdmEycFNwTGpWcjdtcyIsImF1ZCI6InNjaG9vbC1tYW5hZ2VtZW50LWU3emN6cmR6by1hbWlyLWdob2Rpcy1wcm9qZWN0cy52ZXJjZWwuYXBwIiwidXNlcm5hbWUiOiJhbWlyZ29kaTc4Ni1nbWFpbGNvbSIsInN1YiI6InNzby1wcm90ZWN0aW9uIn0.63pSADGo5T_QjtuCWh3rg0KoA1k6KfX-kPDISNo0p8s",
+						"type": "text"
+					},
+					{
+						"key": "if-none-match",
+						"value": "W/\"12-zNsp423GZzL8lvQl+H8JIQXSWQE\"",
+						"type": "text"
+					},
+					{
+						"key": "priority",
+						"value": "u=0, i",
+						"type": "text"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Microsoft Edge\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"",
+						"type": "text"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0",
+						"type": "text"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\"",
+						"type": "text"
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "document",
+						"type": "text"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "navigate",
+						"type": "text"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "none",
+						"type": "text"
+					},
+					{
+						"key": "sec-fetch-user",
+						"value": "?1",
+						"type": "text"
+					},
+					{
+						"key": "upgrade-insecure-requests",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"AmirSchoolAdmin\",\r\n  \"password\": \"AmirSchoolAdmin\",\r\n  \"role\": \"schooladmin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://school-management-j601vvemj-amir-ghodis-projects.vercel.app/api/auth/register",
+					"protocol": "https",
+					"host": [
+						"school-management-j601vvemj-amir-ghodis-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"AmirSchoolAdmin\",\r\n  \"password\": \"AmirSchoolAdmin\"\r\n}"
+				},
+				"url": {
+					"raw": "https://school-management-j601vvemj-amir-ghodis-projects.vercel.app/api/auth/login",
+					"protocol": "https",
+					"host": [
+						"school-management-j601vvemj-amir-ghodis-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/schools",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzRlZWNlYzc2YTBiZDhmYTI3Njg4YiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzM1NzE3MTQzLCJleHAiOjE3MzU3MjA3NDN9.4kFHz-M5SiWI43tE2YZc09aSRZESJnNm8vG_Ke1hyBY"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Sample School\",\r\n  \"address\": \"123 Main St\",\r\n  \"phone\": \"123-456-7890\"\r\n}"
+				},
+				"url": {
+					"raw": "https://school-management-j601vvemj-amir-ghodis-projects.vercel.app/api/schools",
+					"protocol": "https",
+					"host": [
+						"school-management-j601vvemj-amir-ghodis-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"schools"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/schools",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzRlZWNlYzc2YTBiZDhmYTI3Njg4YiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzM1NzE3MTQzLCJleHAiOjE3MzU3MjA3NDN9.4kFHz-M5SiWI43tE2YZc09aSRZESJnNm8vG_Ke1hyBY"
+					}
+				],
+				"url": {
+					"raw": "https://school-management-j601vvemj-amir-ghodis-projects.vercel.app/api/schools",
+					"protocol": "https",
+					"host": [
+						"school-management-j601vvemj-amir-ghodis-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"schools"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/schools/{school_id}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzRlZWNlYzc2YTBiZDhmYTI3Njg4YiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzM1NzE3MTQzLCJleHAiOjE3MzU3MjA3NDN9.4kFHz-M5SiWI43tE2YZc09aSRZESJnNm8vG_Ke1hyBY"
+					}
+				],
+				"url": {
+					"raw": "https://school-management-j601vvemj-amir-ghodis-projects.vercel.app/api/schools/6774f1282917bd4313e1510a",
+					"protocol": "https",
+					"host": [
+						"school-management-j601vvemj-amir-ghodis-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"schools",
+						"6774f1282917bd4313e1510a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/schools/{school_id}",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzRlZWNlYzc2YTBiZDhmYTI3Njg4YiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzM1NzE3MTQzLCJleHAiOjE3MzU3MjA3NDN9.4kFHz-M5SiWI43tE2YZc09aSRZESJnNm8vG_Ke1hyBY"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Updated School Name\",\r\n  \"address\": \"456 Another St\",\r\n  \"phone\": \"987-654-3210\"\r\n}"
+				},
+				"url": {
+					"raw": "https://school-management-j601vvemj-amir-ghodis-projects.vercel.app/api/schools/6774f1282917bd4313e1510a",
+					"protocol": "https",
+					"host": [
+						"school-management-j601vvemj-amir-ghodis-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"schools",
+						"6774f1282917bd4313e1510a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/schools/{school_id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzRlZWNlYzc2YTBiZDhmYTI3Njg4YiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzM1NzE3MTQzLCJleHAiOjE3MzU3MjA3NDN9.4kFHz-M5SiWI43tE2YZc09aSRZESJnNm8vG_Ke1hyBY"
+					}
+				],
+				"url": {
+					"raw": "https://school-management-j601vvemj-amir-ghodis-projects.vercel.app/api/schools/6774cd833ea3106efe83c351",
+					"protocol": "https",
+					"host": [
+						"school-management-j601vvemj-amir-ghodis-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"schools",
+						"6774cd833ea3106efe83c351"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/classrooms",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzRlZWViYzc2YTBiZDhmYTI3Njg4ZCIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNTcxNzg5NCwiZXhwIjoxNzM1NzIxNDk0fQ.X5L0_sG0m44qO_FFTyhmUrKHgX1ldBSz3Ofz3i3vZ5w"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Classroom A\",\r\n  \"capacity\": 30,\r\n  \"school\": \"6774f1282917bd4313e1510a\"\r\n}"
+				},
+				"url": {
+					"raw": "https://school-management-j601vvemj-amir-ghodis-projects.vercel.app/api/classrooms",
+					"protocol": "https",
+					"host": [
+						"school-management-j601vvemj-amir-ghodis-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"classrooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/classrooms/{school_id}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzRlZWViYzc2YTBiZDhmYTI3Njg4ZCIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNTcxNzg5NCwiZXhwIjoxNzM1NzIxNDk0fQ.X5L0_sG0m44qO_FFTyhmUrKHgX1ldBSz3Ofz3i3vZ5w"
+					}
+				],
+				"url": {
+					"raw": "https://school-management-j601vvemj-amir-ghodis-projects.vercel.app/api/classrooms/6774f1282917bd4313e1510a/class",
+					"protocol": "https",
+					"host": [
+						"school-management-j601vvemj-amir-ghodis-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"classrooms",
+						"6774f1282917bd4313e1510a",
+						"class"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/classrooms/{classroom_id}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzRlZWViYzc2YTBiZDhmYTI3Njg4ZCIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNTcxNzg5NCwiZXhwIjoxNzM1NzIxNDk0fQ.X5L0_sG0m44qO_FFTyhmUrKHgX1ldBSz3Ofz3i3vZ5w"
+					}
+				],
+				"url": {
+					"raw": "https://school-management-j601vvemj-amir-ghodis-projects.vercel.app/api/classrooms/6774f5892917bd4313e15116",
+					"protocol": "https",
+					"host": [
+						"school-management-j601vvemj-amir-ghodis-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"classrooms",
+						"6774f5892917bd4313e15116"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/classrooms/{classroom_id}",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzRlZWViYzc2YTBiZDhmYTI3Njg4ZCIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNTcxNzg5NCwiZXhwIjoxNzM1NzIxNDk0fQ.X5L0_sG0m44qO_FFTyhmUrKHgX1ldBSz3Ofz3i3vZ5w"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Updated Classroom Name\",\r\n  \"capacity\": 35\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://school-management-j601vvemj-amir-ghodis-projects.vercel.app/api/classrooms/6774f5892917bd4313e15116",
+					"protocol": "https",
+					"host": [
+						"school-management-j601vvemj-amir-ghodis-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"classrooms",
+						"6774f5892917bd4313e15116"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/classrooms/{classroom_id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzRlZWViYzc2YTBiZDhmYTI3Njg4ZCIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNTcxNzg5NCwiZXhwIjoxNzM1NzIxNDk0fQ.X5L0_sG0m44qO_FFTyhmUrKHgX1ldBSz3Ofz3i3vZ5w"
+					}
+				],
+				"url": {
+					"raw": "https://school-management-j601vvemj-amir-ghodis-projects.vercel.app/api/classrooms/6774f5892917bd4313e15116",
+					"protocol": "https",
+					"host": [
+						"school-management-j601vvemj-amir-ghodis-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"classrooms",
+						"6774f5892917bd4313e15116"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/students",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzRlZWViYzc2YTBiZDhmYTI3Njg4ZCIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNTcxNzg5NCwiZXhwIjoxNzM1NzIxNDk0fQ.X5L0_sG0m44qO_FFTyhmUrKHgX1ldBSz3Ofz3i3vZ5w"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Student Name2\",\r\n  \"age\": 11,\r\n  \"classroom\": \"6774f5892917bd4313e15116\"\r\n}"
+				},
+				"url": {
+					"raw": "https://school-management-j601vvemj-amir-ghodis-projects.vercel.app/api/students",
+					"protocol": "https",
+					"host": [
+						"school-management-j601vvemj-amir-ghodis-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/students/{classroom_id}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzRlZWViYzc2YTBiZDhmYTI3Njg4ZCIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNTcxNzg5NCwiZXhwIjoxNzM1NzIxNDk0fQ.X5L0_sG0m44qO_FFTyhmUrKHgX1ldBSz3Ofz3i3vZ5w"
+					}
+				],
+				"url": {
+					"raw": "https://school-management-j601vvemj-amir-ghodis-projects.vercel.app/api/students/6774f5892917bd4313e15116/studentDetails",
+					"protocol": "https",
+					"host": [
+						"school-management-j601vvemj-amir-ghodis-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"students",
+						"6774f5892917bd4313e15116",
+						"studentDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/students/{student_id}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzRlZWViYzc2YTBiZDhmYTI3Njg4ZCIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNTcxOTA5NywiZXhwIjoxNzM1NzIyNjk3fQ.WGwClynAmW_XfcDc9Khcyr3TrnlMMA6hUgdinKBeZYA"
+					}
+				],
+				"url": {
+					"raw": "https://school-management-j601vvemj-amir-ghodis-projects.vercel.app/api/students/6774f7fe4125534c1e060ffe",
+					"protocol": "https",
+					"host": [
+						"school-management-j601vvemj-amir-ghodis-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"students",
+						"6774f7fe4125534c1e060ffe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/students/{student_id}",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzRlZWViYzc2YTBiZDhmYTI3Njg4ZCIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNTcxOTA5NywiZXhwIjoxNzM1NzIyNjk3fQ.WGwClynAmW_XfcDc9Khcyr3TrnlMMA6hUgdinKBeZYA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Updated Student Name\",\r\n  \"age\": 11\r\n}"
+				},
+				"url": {
+					"raw": "https://school-management-j601vvemj-amir-ghodis-projects.vercel.app/api/students/6774f7fe4125534c1e060ffe",
+					"protocol": "https",
+					"host": [
+						"school-management-j601vvemj-amir-ghodis-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"students",
+						"6774f7fe4125534c1e060ffe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/students/{student_id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzRlZWViYzc2YTBiZDhmYTI3Njg4ZCIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNTcxOTA5NywiZXhwIjoxNzM1NzIyNjk3fQ.WGwClynAmW_XfcDc9Khcyr3TrnlMMA6hUgdinKBeZYA"
+					}
+				],
+				"url": {
+					"raw": "https://school-management-j601vvemj-amir-ghodis-projects.vercel.app/api/students/6774f7fe4125534c1e060ffe",
+					"protocol": "https",
+					"host": [
+						"school-management-j601vvemj-amir-ghodis-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"students",
+						"6774f7fe4125534c1e060ffe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://school-management-e7zczrdzo-amir-ghodis-projects.vercel.app/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US,en;q=0.9,en-IN;q=0.8"
+					},
+					{
+						"key": "cache-control",
+						"value": "max-age=0"
+					},
+					{
+						"key": "cookie",
+						"value": "_vercel_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJyUXBEY2FJaDFIYmVHdHBXTDJBWTBsM0kiLCJpYXQiOjE3MzU3MTU1ODQsIm93bmVySWQiOiJ0ZWFtX25WUnlENUdwZ0tpdmEycFNwTGpWcjdtcyIsImF1ZCI6InNjaG9vbC1tYW5hZ2VtZW50LWU3emN6cmR6by1hbWlyLWdob2Rpcy1wcm9qZWN0cy52ZXJjZWwuYXBwIiwidXNlcm5hbWUiOiJhbWlyZ29kaTc4Ni1nbWFpbGNvbSIsInN1YiI6InNzby1wcm90ZWN0aW9uIn0.63pSADGo5T_QjtuCWh3rg0KoA1k6KfX-kPDISNo0p8s"
+					},
+					{
+						"key": "if-none-match",
+						"value": "W/\"12-zNsp423GZzL8lvQl+H8JIQXSWQE\""
+					},
+					{
+						"key": "priority",
+						"value": "u=0, i"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Microsoft Edge\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "document"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "navigate"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "none"
+					},
+					{
+						"key": "sec-fetch-user",
+						"value": "?1"
+					},
+					{
+						"key": "upgrade-insecure-requests",
+						"value": "1"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
+					}
+				],
+				"url": {
+					"raw": "https://school-management-e7zczrdzo-amir-ghodis-projects.vercel.app/",
+					"protocol": "https",
+					"host": [
+						"school-management-e7zczrdzo-amir-ghodis-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "Generated from cURL: curl 'https://school-management-e7zczrdzo-amir-ghodis-projects.vercel.app/' \\\r\n  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \\\r\n  -H 'accept-language: en-US,en;q=0.9,en-IN;q=0.8' \\\r\n  -H 'cache-control: max-age=0' \\\r\n  -H 'cookie: _vercel_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJyUXBEY2FJaDFIYmVHdHBXTDJBWTBsM0kiLCJpYXQiOjE3MzU3MTU1ODQsIm93bmVySWQiOiJ0ZWFtX25WUnlENUdwZ0tpdmEycFNwTGpWcjdtcyIsImF1ZCI6InNjaG9vbC1tYW5hZ2VtZW50LWU3emN6cmR6by1hbWlyLWdob2Rpcy1wcm9qZWN0cy52ZXJjZWwuYXBwIiwidXNlcm5hbWUiOiJhbWlyZ29kaTc4Ni1nbWFpbGNvbSIsInN1YiI6InNzby1wcm90ZWN0aW9uIn0.63pSADGo5T_QjtuCWh3rg0KoA1k6KfX-kPDISNo0p8s' \\\r\n  -H 'if-none-match: W/\"12-zNsp423GZzL8lvQl+H8JIQXSWQE\"' \\\r\n  -H 'priority: u=0, i' \\\r\n  -H 'sec-ch-ua: \"Microsoft Edge\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"' \\\r\n  -H 'sec-ch-ua-mobile: ?0' \\\r\n  -H 'sec-ch-ua-platform: \"Windows\"' \\\r\n  -H 'sec-fetch-dest: document' \\\r\n  -H 'sec-fetch-mode: navigate' \\\r\n  -H 'sec-fetch-site: none' \\\r\n  -H 'sec-fetch-user: ?1' \\\r\n  -H 'upgrade-insecure-requests: 1' \\\r\n  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0'"
+			},
+			"response": []
+		}
+	]
+}
