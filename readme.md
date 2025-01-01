@@ -1,3 +1,16 @@
+# Steps to run
+
+1. clone the repo
+2. run npm i
+3. run npm start
+
+
+# Vercel URL 
+
+https://school-management-e7zczrdzo-amir-ghodis-projects.vercel.app/
+
+# Postman collection is attached for all the apis
+
 
 ## ALL THE API's CURL
 
